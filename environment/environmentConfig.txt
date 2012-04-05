@@ -1,0 +1,10 @@
+[
+	{ "name": "Dev", "pattern": "(.*?)(\.*)dev(\.*)(.*?)" },
+	{ "name": "Dev", "pattern": "localhost" },
+	{ "name": "Dev", "pattern": "127.0.0.1" },
+	{ "name": "Test", "pattern": "(.*?)(\.*)test(\.*)(.*?)" },
+	{ "name": "Staging", "pattern": "(.*?)(\.*)stage(\.*)(.*?)" },
+	{ "name": "Prod", "pattern": "(.*?)\.net" },
+	{ "name": "Prod", "pattern": "(.*?)\.com" },
+	{ "name": "Prod", "pattern": "(.*?)(\.*)prod(\.*)(.*?)" }
+]
