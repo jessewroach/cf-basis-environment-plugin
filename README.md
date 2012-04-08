@@ -9,7 +9,7 @@ Once copied reload your application and Basis will pick it up automatically and 
 
 Basis is a ColdFusion MVC framework, which can be found at https://github.com/adampresley/cf-basis.
 
-Inside the environment directory is a configuration file named environmentConfig.txt. The default file looks like this:
+Inside the environment directory is a configuration file named **environmentConfig.txt**. The default file looks like this:
 
     [
 		{ "name": "Dev", "pattern": "(.*?)(\.*)dev(\.*)(.*?)" },
