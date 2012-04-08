@@ -1,11 +1,33 @@
 # cf-basis Environment Plugin
 
-A basic internationalization and globalization plugin for the CF-Basis framework.
+A environment switching component for the CF-Basis framework.
 
 ### Usage
-*Coming Soon!*
+Copy the **environment** directory and its contents into your Basis **plugins** folder. The folder for plugins is named plugins by default unless you have customized it in your application.
+
+Once copied reload your application and Basis will pick it up automatically and register it as a new application variable object called *env*.
+
+Basis is a ColdFusion MVC framework, which can be found at https://github.com/adampresley/cf-basis.
+
+Inside the environment directory is a configuration file named environmentConfig.txt. The default file looks like this:
+
+    [
+		{ "name": "Dev", "pattern": "(.*?)(\.*)dev(\.*)(.*?)" },
+		{ "name": "Dev", "pattern": "localhost" },
+		{ "name": "Dev", "pattern": "127.0.0.1" },
+		{ "name": "Test", "pattern": "(.*?)(\.*)test(\.*)(.*?)" },
+		{ "name": "Staging", "pattern": "(.*?)(\.*)stage(\.*)(.*?)" },
+		{ "name": "Prod", "pattern": "(.*?)\.net" },
+		{ "name": "Prod", "pattern": "(.*?)\.com" },
+		{ "name": "Prod", "pattern": "(.*?)(\.*)prod(\.*)(.*?)" }
+	]
+
+You'll notice that it's a JSON string. Coldfusion parses this string and checks all of the regexs against the Coldfusion CGI variable server_name.
 
 Example:
+
+    <!--- Display the current environment --->
+    <cfoutput>#application.env.getCurrentEnv()#</cfoutput>
 
 ### License
 Copyright 2012 Jesse Roach. All rights reserved.
